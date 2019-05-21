@@ -1,5 +1,6 @@
 class Wagoner < ApplicationRecord
-  belongs_to :owner, class_name: "User", foreign_key: "user_id"
+  belongs_to :user
+  has_many :users
   has_many :bookings
   validates :description, presence: true
   validates :github_name, uniqueness: true, presence: true
