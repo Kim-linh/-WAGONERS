@@ -4,11 +4,11 @@ class WagonersController < ApplicationController
   def index
     @wagoners = Wagoner.all
   end
-end
 
-#   def show
-#     @wagoner = Wagoner.find(params[:id])
-#   end
+  def show
+    @wagoner = Wagoner.find(params[:id])
+  end
+end
 
 #   def new
 #     @wagoner = Wagoner.new

@@ -4,26 +4,24 @@
   <div class="banner-content">
     <h1>Les wagoners </h1>
     <p>Awesome persons for company nightlife</p>
-    <%#= link_to "Rent a wagoner", wagoners_show_path, class: "btn btn-primary btn-lg" %>
+    <%= link_to "Rent a wagoner", wagoners_path, class: "btn btn-primary btn-lg" %>
   </div>
 </div>
 <div class="container">
   <div class="row">
-  <div class="row">
-    <% @wagoners.each do |wagoner| %>
-
+    <div class="row">
+      <% @wagoners.each do |wagoner| %>
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/500x400/?cocktail');">
           <div class="card-description">
-            <h2><%= wagoner.github_name %></h2>
-          </div>
-          <%= link_to "show", wagoner_path(wagoner), class: 'card-link' %>
-        </div>
-      </div>
-
-    <% end %>
-  </div>
-  </div>
+           <%= link_to "show", wagoner_path(wagoner), class: 'card-link' %>
+           <h2><%= wagoner.github_name %></h2>
+         </div>
+       </div>
+     </div>
+     <% end %>
+   </div>
+ </div>
 </div>
 
 
