@@ -12,7 +12,7 @@ Booking.destroy_all
 
 puts 'add a profile...'
 
-nico = User.create!(first_name: 'Nico', last_name: 'Connard', email: 'nico@lewagon.fr', password: 'azerty')
+nico = User.create!(first_name: 'Nico', last_name: 'gentil', email: 'nico@lewagon.fr', password: 'azerty')
 lola = User.create!(first_name: 'Lola', last_name: 'Poulette', email: 'lola@lewagon.fr', password: 'azerty')
 
 puts 'User OK...'
@@ -36,3 +36,8 @@ wagoner5.save!
 puts 'new wagoner'
 
 puts 'add a date'
+
+booking1 = Booking.new(start_at: 15, end_at: 18)
+booking.user = nico
+booking.wagoner = wagoner1
+booking.user.wagoner.save!
