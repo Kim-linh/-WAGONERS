@@ -38,6 +38,6 @@ puts 'new wagoner'
 puts 'add a date'
 
 booking1 = Booking.new(start_at: 15, end_at: 18)
-booking.user = nico
-booking.wagoner = wagoner1
-booking.user.wagoner.save!
+booking1.user = nico
+booking1.wagoner = wagoner1
+booking1.save!
