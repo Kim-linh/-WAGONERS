@@ -1,12 +1,15 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style ="background-image: url(<%= image_url 'girls.jpeg' %>);background-size: cover; background-position: center;">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "logo_wagoner.png" %>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+    <h1 class="text">LOCATION DE WAGONERS </h1>
+    <p class="description">Une expérience unique avec ton wagoners préféré!</p>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
