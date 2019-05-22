@@ -6,7 +6,6 @@ class WagonersController < ApplicationController
     @wagoners = Wagoner.all
   end
 
-
   def show
   end
 
