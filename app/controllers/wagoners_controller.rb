@@ -10,7 +10,8 @@ class WagonersController < ApplicationController
     @markers = @wagoners.map do |wagoner|
       {
         lat: wagoner.latitude,
-        lng: wagoner.longitude
+        lng: wagoner.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { wagoner: wagoner })
       }
     end
   end
