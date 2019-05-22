@@ -1,8 +1,16 @@
 
-<h1>Louez-moi Wagoners</h1>
+<div class="container">
+  <h1>Louez-moi Wagoners</h1>
 
-  <h2>Je suis<%= @wagoner.github_name %></h2>
-  <h2>Tu peux me contacter sur git tub<%= @wagoner.github_name %></h2>
-  <h2>dans la vie je suis bon à :<%= @wagoner.description%></h2>
+    <h2>Je suis<%= @wagoner.github_name %></h2>
+    <h2>Tu peux me contacter sur git tub<%= @wagoner.github_name %></h2>
+    <h2>dans la vie je suis bon à :<%= @wagoner.description%></h2>
 
-  <%= link_to "Back to all the wagoners", wagoners_index_path class: "btn btn-primary btn-lg" %>
+    <%= link_to "Back to all the wagoners", wagoners_path, class: "btn btn-primary btn-lg" %>
+
+  <%= simple_form_for [@wagoner, @booking] do |f| %>
+    <%= f.input :start_at %>
+    <%= f.input :end_at %>
+    <%= f.submit "réserver", class: "btn btn-primary" %>
+  <% end %>
+</div>
