@@ -4,7 +4,6 @@ class WagonersController < ApplicationController
   before_action :find_wagoner, only: [:show, :edit, :update, :delete]
 
   def index
-    @wagoners = Wagoner.all
 
     @wagoners = Wagoner.where.not(latitude: nil, longitude: nil)
 
