@@ -1,9 +1,19 @@
+
 class WagonersController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   before_action :find_wagoner, only: [:show, :edit, :update, :delete]
 
   def index
-    @wagoners = Wagoner.all
+
+    @wagoners = Wagoner.where.not(latitude: nil, longitude: nil)
+
+    @markers = @wagoners.map do |wagoner|
+      {
+        lat: wagoner.latitude,
+        lng: wagoner.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { wagoner: wagoner })
+      }
+    end
   end
 
   def show
