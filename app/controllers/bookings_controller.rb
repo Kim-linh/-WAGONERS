@@ -5,10 +5,10 @@ class BookingsController < ApplicationController
     @bookings = Booking.where(user: current_user)
   end
 
-  def new
-    @wagoner = Wagoner.find(params[:wagoner_id])
-    @booking = Booking.new
-  end
+  # def new
+  #   @wagoner = Wagoner.find(params[:wagoner_id])
+  #   @booking = Booking.new
+  # end
 
   # def show
   # end
