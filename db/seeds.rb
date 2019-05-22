@@ -37,7 +37,18 @@ puts 'new wagoner'
 
 puts 'add a date'
 
-booking1 = Booking.new(start_at: 15, end_at: 18)
+
+now = Time.now
+
+booking1 = Booking.new(start_at: now, end_at: now)
 booking1.user = nico
 booking1.wagoner = wagoner1
 booking1.save!
+
+booking2 = Booking.new(start_at: now, end_at: now)
+booking2.user = lola
+booking2.wagoner = wagoner2
+booking2.save!
+
+puts 'Fiiiniiii'
+
