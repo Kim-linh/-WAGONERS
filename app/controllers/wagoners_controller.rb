@@ -1,8 +1,18 @@
+
 class WagonersController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
     @wagoners = Wagoner.all
+
+    @wagoners = Wagoner.where.not(latitude: nil, longitude: nil)
+
+    @markers = @wagoners.map do |wagoner|
+      {
+        lat: wagoner.latitude,
+        lng: wagoner.longitude
+      }
+    end
   end
 end
 
