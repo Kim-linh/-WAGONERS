@@ -5,4 +5,5 @@ class Wagoner < ApplicationRecord
   validates :description, presence: true
   validates :github_name, uniqueness: true, presence: true
   validates :price, presence: true
+  validates :rating, presence: true
 end
