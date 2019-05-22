@@ -2,7 +2,8 @@ class BookingsController < ApplicationController
   #skip_before_action :authenticate_user!, only: :index
 
   def index
-    @bookings = Booking.where(user: current_user)
+
+    @wagoner = Wagoner.find(params[:wagoner_id])
   end
 
   # def new
@@ -24,5 +25,9 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def booking_params
+    params.require("booking").permit(:start_at, :end_at)
   end
 end
