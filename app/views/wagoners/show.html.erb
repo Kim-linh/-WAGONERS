@@ -1,27 +1,29 @@
 
 <div class="container mt-3">
+  <h1>Louez-moi</h1>
 
- <h1>Louez-moi</h1>
-
- <div class="card-product">
-  <img src="https://avatars0.githubusercontent.com/u/44776919?s=400&v=4">
-
-  <div class="card-product-infos">
-    <h2><%= @wagoner.github_name %></h2>
-    <p><strong>Description:</strong> <%= @wagoner.description%>.</p>
-    <p><strong>Price:</strong> 12€/heure.</p>
-    <p><%= display_stars(@wagoner.rating) %></p>
+<div class="cards">
+  <div class="card" style="width: 18rem;">
+  <img src="https://avatars0.githubusercontent.com/u/44776919?s=400&v=4" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">
+      <h2><%= @wagoner.github_name %></h2>
+      <p><strong>Description:</strong> <%= @wagoner.description%>.</p>
+      <p><strong>Price:</strong> 12€/heure.</p>
+      <p><%= display_stars(@wagoner.rating) %></p>.</p>
   </div>
 </div>
-<br>
 
-<div>
+
+<div class="form">
+
   <%= simple_form_for [@wagoner, @booking] do |f| %>
     <%= f.input :start_at %>
     <%= f.input :end_at %>
     <%= f.submit "Réserver", class: "btn btn-primary btn-lg btn-block" %>
+    <br>
+    <%= link_to "Revenir aux Wagoners", wagoners_path, class: "btn btn-outline-secondary btn-sm" %>
   <% end %>
 </div>
-<br>
- <%= link_to "Revenir aux Wagoners", wagoners_path, class: "btn btn-dark btn-sm" %>
+</div>
 </div>
