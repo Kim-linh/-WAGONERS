@@ -21,6 +21,10 @@ class WagonersController < ApplicationController
     @booking = Booking.new
   end
 
+  def wag_show
+    @wagoner = Wagoner.find(params[:id])
+  end
+
   def new
     @wagoner = Wagoner.new
   end
@@ -28,7 +32,7 @@ class WagonersController < ApplicationController
   def create
     @wagoner = Wagoner.new(wagoner_params)
     if @wagoner.save
-      redirect_to wagoner_path(@wagoner)
+      redirect_to wag_show_wagoner_path(@wagoner)
     else
       render :new
     end
