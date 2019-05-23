@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
 
     # @wagoner = Wagoner.find(params[:wagoner_id])
     @bookings = Booking.where(user: current_user)
-    
+
   end
 
   # def new
