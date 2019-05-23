@@ -19,19 +19,19 @@ lola = User.create!(first_name: 'Lola', last_name: 'Poulette', email: 'lola@lewa
 puts 'User OK...'
 
 
-wagoner1 = Wagoner.new(address: "1 Avenue Des Champs Elysees 75008 Paris", github_name: "Benoit", description: "Je sers à rien", rating: 1, price: 12, avatar: "Photo_Wagon_u6i9ou.jpg")
+wagoner1 = Wagoner.new(address: "1 Avenue Des Champs Elysees 75008 Paris", github_name: "Benoit", description: "Je sers à rien", rating: 1, price: 12, avatar: "benoit.jpg")
 wagoner1.user = nico
 wagoner1.save!
-wagoner2 = Wagoner.new(address: "10 avenue des Champs Elysees 75008 Paris", github_name: "Arthur", description: "On va boire un coup?", rating: 3, price: 28, user_id: 1, avatar: "arthur_ayogsd.jpg")
+wagoner2 = Wagoner.new(address: "10 avenue des Champs Elysees 75008 Paris", github_name: "Arthur", description: "On va boire un coup?", rating: 3, price: 28, user_id: 1, avatar: "arthur.jpg")
 wagoner2.user = nico
 wagoner2.save!
-wagoner3 = Wagoner.new(address: "20 avenue des Champs Elysees 75008 Paris", github_name: "Sarah", description: "Je suis là pour vous aider", rating: 5, price: 53727, user_id: 1, avatar: "sarah_o3gehg.jpg")
+wagoner3 = Wagoner.new(address: "20 avenue des Champs Elysees 75008 Paris", github_name: "Sarah", description: "Je suis là pour vous aider", rating: 5, price: 53727, user_id: 1, avatar: "sarah.jpg")
 wagoner3.user = nico
 wagoner3.save!
-wagoner4 = Wagoner.new(address: "30 avenue des Champs Elysees 75008 Paris", github_name: "Kevin", description: "Nous sommes deux, battez-vous", rating: 3, price: 375, user_id: 1, avatar: "kevin_doshy0.jpg")
+wagoner4 = Wagoner.new(address: "30 avenue des Champs Elysees 75008 Paris", github_name: "Kevin", description: "Nous sommes deux, battez-vous", rating: 3, price: 375, user_id: 1, avatar: "kevin.jpg")
 wagoner4.user = nico
 wagoner4.save!
-wagoner5 = Wagoner.new(address: "150 avenue des Champs Elysees 75008 Paris", github_name: "Mathilde", description: "Blank c'est moi", rating: 4, price: 29873, user_id: 1, avatar: "mathilde_vzkjqs.jpg")
+wagoner5 = Wagoner.new(address: "150 avenue des Champs Elysees 75008 Paris", github_name: "Mathilde", description: "Blank c'est moi", rating: 4, price: 29873, user_id: 1, avatar: "mathilde.jpg")
 wagoner5.user = lola
 wagoner5.save!
 
