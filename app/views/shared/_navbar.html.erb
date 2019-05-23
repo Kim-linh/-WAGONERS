@@ -36,10 +36,10 @@
           <%= link_to "Devenir wagoner", new_wagoner_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Dashboard", "#", class: "nav-link" %>
+          <%= link_to "Dashboard", wagoner_bookings_path(:wagoner_id), class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Se deconnecter", "#", class: "nav-link" %>
+          <%= link_to "Se deconnecter", destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -52,44 +52,3 @@
     </ul>
   </div>
 </div>
-
-
-
-<!--
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style ="background-image: url(<%#= image_url 'https://res.cloudinary.com/dvb6zudlf/image/upload/v1558538299/girls_f6dh4h.jpg' %>);background-size: cover; background-position: center;">
-  <%#= link_to root_path, class: "navbar-brand" do %>
-    <%#= image_tag "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558537440/logo_wagoner_kei7wi.png" %>
-    <%# end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-    <h1 class="text">LOCATION DE WAGONERS <br></h1>
-    <p class="description"><br>Une expérience unique avec ton wagoners préféré!</p>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <%# if user_signed_in? %>
-        <li class="nav-item active">
-          <%#= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%#= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%##= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%#= link_to "Action", "#", class: "dropdown-item" %>
-            <%#= link_to "Another action", "#", class: "dropdown-item" %>
-            <%#= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <%# else %>
-        <li class="nav-item">
-          <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <%# end %>
-    </ul>
-  </div>
-</div>
- -->
