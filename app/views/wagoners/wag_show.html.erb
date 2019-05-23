@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="container mt-3">
+
+    <h1>Mon profil</h1>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-image-product">
+          <%= cl_image_tag(@wagoner.avatar) %>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+          <h2><%= @wagoner.github_name %></h2>
+          <p><strong>Description:</strong> <%= @wagoner.description%>.</p>
+          <p><strong>Price:</strong> <%= @wagoner.price%>€/jour</p>
+          <p><%= display_stars(@wagoner.rating) %></p>.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
