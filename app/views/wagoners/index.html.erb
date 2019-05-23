@@ -7,8 +7,7 @@
 
         <div class="card" style="width: 18rem;">
           <div class="card-image-height">
-             <img src="https://res.cloudinary.com/dvb6zudlf/image/upload/v1558537445/benoit_a5txll.png" class="card-img-top" alt="...">
-             <!-- <img src="<%#= wagoner.photo %>" class="card-img-top" alt="..."> -->
+            <%= cl_image_tag(wagoner.avatar) %>
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= wagoner.github_name %></h5>
