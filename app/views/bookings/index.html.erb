@@ -3,8 +3,8 @@
   <h1> Confirmation</h1>
   <div class="notification-content">
     <p>Félicitations ! vous avez loué <%= @wagoner.github_name %> pour quelques heures </p>
-    <img src='https://res.cloudinary.com/dvb6zudlf/image/upload/v1558536712/ben_yob4ud.jpg' class="img-size-ben"/>
 
+    <%= cl_image_tag("ben_yob4ud.jpg", :opacity=>100, :radius=>5, :width=>150, :crop=>"fit") %>
     </div>
 
   </div>

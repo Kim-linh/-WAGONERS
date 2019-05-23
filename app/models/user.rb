@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :wagoners
   validates :first_name, presence: true
   validates :last_name, uniqueness: true, presence: true
+  mount_uploader :photo, PhotoUploader
 end
