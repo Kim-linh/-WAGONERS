@@ -1,1 +1,5 @@
-<h1><%= wagoner.github_name %></h1>
+<div class="wagoner-pop-up-info">
+  <h3><%= link_to wagoner.github_name, wagoner_path(wagoner) %></h3>
+  <p><%= wagoner.description %></p>
+  <p class="wagoner-pop-up-price"><%= wagoner.price%>€/H</p>
+</div>

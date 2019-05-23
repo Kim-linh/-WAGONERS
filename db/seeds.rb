@@ -18,10 +18,10 @@ lola = User.create!(first_name: 'Lola', last_name: 'Poulette', email: 'lola@lewa
 
 puts 'User OK...'
 
-wagoner1 = Wagoner.new(address: "1 Avenue Des Champs Elysees 75008 Paris", github_name: "Benoit", description: "Si vous avez besoin d'un rake vert, Benoit ne pourra pas vous aider", rating: 1, price: 12)
+wagoner1 = Wagoner.new(address: "1 Avenue Des Champs Elysees 75008 Paris", github_name: "Benoit", description: "Je sert à rien", rating: 1, price: 12)
 wagoner1.user = nico
 wagoner1.save!
-wagoner2 = Wagoner.new(address: "10 avenue des Champs Elysees 75008 Paris", github_name: "Arthur", description: "Toujours là pour boire un coup", rating: 3, price: 28, user_id: 1)
+wagoner2 = Wagoner.new(address: "10 avenue des Champs Elysees 75008 Paris", github_name: "Arthur", description: "On va boire un coup?", rating: 3, price: 28, user_id: 1)
 wagoner2.user = nico
 wagoner2.save!
 wagoner3 = Wagoner.new(address: "20 avenue des Champs Elysees 75008 Paris", github_name: "Sarah", description: "Je suis là pour vous aider", rating: 5, price: 53727, user_id: 1)
@@ -52,4 +52,5 @@ booking2.wagoner = wagoner2
 booking2.save!
 
 puts 'Fiiiniiii'
+
 
