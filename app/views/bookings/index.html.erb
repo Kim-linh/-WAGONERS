@@ -1,11 +1,12 @@
 <div class="container">
-  <br>
-  <h1> Confirmation</h1>
-  <div class="notification-content">
-    <p>Félicitations ! vous avez loué <%= @wagoner.github_name %> pour quelques heures </p>
-    <img src='https://res.cloudinary.com/dvb6zudlf/image/upload/v1558536712/ben_yob4ud.jpg' class="img-size-ben"/>
 
+  <h1> Mon dashboard</h1>
+
+    <div class="row">
+      <% @bookings.each do |booking| %>
+        <p><%= booking.wagoner.github_name %></p>
+        <div class="col-4 my-5">
+        </div>
+      <% end %>
     </div>
-
-  </div>
 </div>
