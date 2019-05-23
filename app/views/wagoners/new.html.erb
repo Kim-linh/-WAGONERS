@@ -1,5 +1,4 @@
-<h1>Wagoners#new</h1>
-<p>Find me in app/views/wagoners/new.html.erb</p>
+<h1>Inscription</h1>
 
 <%= simple_form_for @wagoner do |f| %>
     <%= f.input :github_name %>
@@ -7,5 +6,7 @@
     <%= f.input :price %>
     <%= f.input :rating, :as => :hidden, default: 0 %>
     <%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user.id }%>
+    <%= f.input :avatar %>
+    <%= f.input :avatar_cache, as: :hidden %>
     <%= f.submit "Créer", class: "btn btn-primary btn-lg btn-block" %>
 <% end %>

@@ -7,4 +7,5 @@ class Wagoner < ApplicationRecord
   validates :price, presence: true
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+  mount_uploader :avatar, PhotoUploader
 end
