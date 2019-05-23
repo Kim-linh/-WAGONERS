@@ -11,8 +11,10 @@
   <h1>Louez-moi</h1>
 
 <div class="cards">
-  <div class="card" style="width: 18rem;">
-  <img src="https://avatars0.githubusercontent.com/u/44776919?s=400&v=4" class="card-img-top" alt="...">
+  <div class="card">
+    <div class="card-image-height">
+      <%= cl_image_tag(@wagoner.avatar) %>
+    </div>
   <div class="card-body">
     <p class="card-text">
       <h2><%= @wagoner.github_name %></h2>

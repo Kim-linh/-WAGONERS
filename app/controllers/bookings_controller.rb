@@ -2,9 +2,10 @@ class BookingsController < ApplicationController
   #skip_before_action :authenticate_user!, only: :index
 
   def index
+
     # @wagoner = Wagoner.find(params[:wagoner_id])
     @bookings = Booking.where(user: current_user)
-
+    
   end
 
   # def new
@@ -22,7 +23,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
 
     if @booking.save
-      flash[:notice] = "Post successfully created"
+      flash[:notice] = ""
       redirect_to wagoner_bookings_path(@wagoner)
     else
       render :new
