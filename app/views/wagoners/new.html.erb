@@ -1,2 +1,11 @@
 <h1>Wagoners#new</h1>
 <p>Find me in app/views/wagoners/new.html.erb</p>
+
+<%= simple_form_for @wagoner do |f| %>
+    <%= f.input :github_name %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :rating, :as => :hidden, default: 0 %>
+    <%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user.id }%>
+    <%= f.submit "Créer", class: "btn btn-primary btn-lg btn-block" %>
+<% end %>
