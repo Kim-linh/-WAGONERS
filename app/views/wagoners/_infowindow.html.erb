@@ -1,5 +1,10 @@
 <div class="wagoner-pop-up-info">
-  <h3><%= link_to wagoner.github_name, wagoner_path(wagoner) %></h3>
-  <p><%= wagoner.description %></p>
+  <div class="card-image-map">
+  <%= cl_image_tag(wagoner.avatar) %>
+    <h3><%= link_to wagoner.github_name, wagoner_path(wagoner) %></h3>
+    <p><%= wagoner.description %></p>
+  </div>
+
+
   <p class="wagoner-pop-up-price"><%= wagoner.price%>€/H</p>
 </div>
