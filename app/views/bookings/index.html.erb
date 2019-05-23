@@ -1,11 +1,10 @@
 <div class="container">
   <br>
-  <h1> Confirmation</h1>
-  <div class="notification-content">
-    <p>Félicitations ! vous avez loué <%= @wagoner.github_name %> pour quelques heures </p>
-
-    <%= cl_image_tag("ben_yob4ud.jpg", :opacity=>100, :radius=>5, :width=>150, :crop=>"fit") %>
-    </div>
-
+  <h1> Dasboard</h1>
+  <div class="flash flash-success alert alert-dismissible fade show" role="alert">
+    <span><strong>Yay!</strong> 🎉 vous avez loué <%= @wagoner.github_name %></span>
+    <a data-dismiss="alert" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </a>
   </div>
 </div>
