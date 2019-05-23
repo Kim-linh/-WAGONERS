@@ -30,3 +30,9 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
