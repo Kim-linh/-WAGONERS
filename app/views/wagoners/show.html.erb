@@ -1,3 +1,11 @@
+<div class="container">
+  <h1>Louez-moi Wagoners</h1>
+
+  <h2>Je suis <%= @wagoner.github_name %></h2>
+  <h2>Tu peux me contacter sur git tub : <%= @wagoner.github_name %></h2>
+  <h2>Dans la vie je suis bon à : <%= @wagoner.description%></h2>
+
+  <%= link_to "Back to all the wagoners", wagoners_path, class: "btn btn-primary btn-lg" %>
 
 <div class="container mt-3">
   <h1>Louez-moi</h1>
