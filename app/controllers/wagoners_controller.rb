@@ -16,6 +16,8 @@ class WagonersController < ApplicationController
   end
 
   def show
+    @wagoner = Wagoner.find(params[:id])
+
     @booking = Booking.new
   end
 
@@ -26,7 +28,7 @@ class WagonersController < ApplicationController
   def create
     @wagoner = Wagoner.new(wagoner_params)
     if @wagoner.save
-      redirect_to wagoners_path(@wagoner)
+      redirect_to wagoner_path(@wagoner)
     else
       render :new
     end
@@ -51,7 +53,7 @@ class WagonersController < ApplicationController
   end
 
   def wagoner_params
-    params.require(:wagoner).permit(:description, :github_name, :price)
+    params.require(:wagoner).permit(:description, :github_name, :price, :user_id, :rating)
   end
 end
 
