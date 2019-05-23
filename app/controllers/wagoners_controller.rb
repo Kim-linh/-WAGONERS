@@ -17,7 +17,6 @@ class WagonersController < ApplicationController
 
   def show
     @wagoner = Wagoner.find(params[:id])
-
     @booking = Booking.new
   end
 
