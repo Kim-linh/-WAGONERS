@@ -1,5 +1,37 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+  <%= link_to root_path, class: "navbar-brand" do %>
+  <%= image_tag "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558537440/logo_wagoner_kei7wi.png" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="">Log in</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Mon dashboard</a>
+      </li>
+      <li class="nav-item dropdown">
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Log Out</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<!--
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style ="background-image: url(<%= image_url 'https://res.cloudinary.com/dvb6zudlf/image/upload/v1558538299/girls_f6dh4h.jpg' %>);background-size: cover; background-position: center;">
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558537440/logo_wagoner_kei7wi.png" %>
@@ -36,3 +68,4 @@
     </ul>
   </div>
 </div>
+ -->
