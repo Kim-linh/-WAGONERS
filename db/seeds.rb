@@ -19,20 +19,25 @@ lola = User.create!(first_name: 'Lola', last_name: 'Poulette', email: 'lola@lewa
 puts 'User OK...'
 
 
-wagoner1 = Wagoner.new(address: "1 Avenue Des Champs Elysees 75008 Paris", github_name: "Benoit", description: "Je sers à rien", rating: 1, price: 12, avatar: "benoit_oet2od.jpg")
+wagoner1 = Wagoner.new(address: "1 Avenue Des Champs Elysees 75008 Paris", github_name: "Benoit", description: "Je sers à rien", rating: 1, price: 12)
+wagoner1.remote_avatar_url = "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558630637/benoit_oet2od.jpg"
 wagoner1.user = nico
 wagoner1.save!
 wagoner2 = Wagoner.new(address: "10 avenue des Champs Elysees 75008 Paris", github_name: "Arthur", description: "On va boire un coup?", rating: 3, price: 28, user_id: 1, avatar: "arthur_aewwf6.jpg")
 wagoner2.user = nico
+wagoner2.remote_avatar_url = "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558630637/arthur_aewwf6.jpg"
 wagoner2.save!
 wagoner3 = Wagoner.new(address: "20 avenue des Champs Elysees 75008 Paris", github_name: "Sarah", description: "Je suis là pour vous aider", rating: 5, price: 53727, user_id: 1, avatar: "sarah_ddein0.jpg")
 wagoner3.user = nico
+wagoner3.remote_avatar_url = "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558630637/sarah_ddein0.jpg"
 wagoner3.save!
 wagoner4 = Wagoner.new(address: "30 avenue des Champs Elysees 75008 Paris", github_name: "Kevin", description: "Nous sommes deux, battez-vous", rating: 3, price: 375, user_id: 1, avatar: "kevin_ocvyjk.jpg")
 wagoner4.user = nico
+wagoner4.remote_avatar_url = "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558630637/kevin_ocvyjk.jpg"
 wagoner4.save!
 wagoner5 = Wagoner.new(address: "150 avenue des Champs Elysees 75008 Paris", github_name: "Mathilde", description: "Blank c'est moi", rating: 4, price: 29873, user_id: 1, avatar: "mathilde_g72pdq.jpg")
 wagoner5.user = lola
+wagoner5.remote_avatar_url = "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558630637/mathilde_g72pdq.jpg"
 wagoner5.save!
 
 puts 'new wagoner'
