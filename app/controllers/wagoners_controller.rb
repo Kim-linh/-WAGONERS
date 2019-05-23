@@ -56,7 +56,7 @@ class WagonersController < ApplicationController
   end
 
   def wagoner_params
-    params.require(:wagoner).permit(:description, :github_name, :price, :user_id, :rating)
+    params.require(:wagoner).permit(:description, :github_name, :price, :user_id, :rating, :avatar)
   end
 end
 
