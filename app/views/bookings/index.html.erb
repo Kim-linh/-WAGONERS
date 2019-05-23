@@ -1,8 +1,20 @@
 <div class="container">
+  <h1> Dashboard</h1>
+   <div class="row">
+      <% @bookings.each do |booking| %>
+        <p><%= booking.wagoner.github_name %></p>
+        <div class="col-4 my-5">
+        </div>
+      <% end %>
+    </div>
   <br>
-  <h1> Dasboard</h1>
 
 
+  <div class="flash flash-success alert alert-dismissible fade show" role="alert">
+    <span><strong>Yay!</strong> 🎉 vous avez loué <%= @wagoner.github_name %></span>
+    <a data-dismiss="alert" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
 
-  <p>liste des bookings</p>
 </div>

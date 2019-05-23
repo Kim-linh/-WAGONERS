@@ -4,14 +4,13 @@ class WagonersController < ApplicationController
   before_action :find_wagoner, only: [:show, :edit, :update, :delete]
 
   def index
-
     @wagoners = Wagoner.where.not(latitude: nil, longitude: nil)
-
     @markers = @wagoners.map do |wagoner|
       {
         lat: wagoner.latitude,
         lng: wagoner.longitude,
-        infoWindow: render_to_string(partial: "infowindow", locals: { wagoner: wagoner })
+        infoWindow: render_to_string(partial: "infowindow", locals: { wagoner: wagoner }),
+        image_url: helpers.asset_url('logo_wagoner.png')
       }
     end
   end
@@ -43,6 +42,7 @@ class WagonersController < ApplicationController
   def delete
     @wagoner.destroy
   end
+
 
   private
 

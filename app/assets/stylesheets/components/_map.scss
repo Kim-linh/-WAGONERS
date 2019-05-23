@@ -1,0 +1,29 @@
+.mapboxgl-popup {
+  max-width: 10px;
+
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  a {
+    text-decoration: none;
+
+  }
+}
+
+.wagoner-pop-up-info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.wagoner-pop-up-info > h3, p {
+margin: 0px;
+}
+
+.wagoner-pop-up-price {
+  font-weight: bold;
+  text-align: right;
+}
