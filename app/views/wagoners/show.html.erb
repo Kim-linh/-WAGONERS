@@ -1,34 +1,33 @@
 <div class="container">
 
-  <%= link_to "Back to all the wagoners", wagoners_path, class: "btn btn-primary btn-lg" %>
 
-<div class="container mt-3">
-  <h1>Louez-moi</h1>
+  <div class="container mt-3">
+    <h1>Louez-moi</h1>
 
-<div class="cards">
-  <div class="card">
-    <div class="card-image-height">
-      <%= cl_image_tag(@wagoner.avatar) %>
+    <div class="cards">
+      <div class="card">
+        <div class="card-image-product">
+          <%= cl_image_tag(@wagoner.avatar) %>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            <h2><%= @wagoner.github_name %></h2>
+            <p><strong>Description:</strong> <%= @wagoner.description%>.</p>
+            <p><strong>Price:</strong> <%= @wagoner.price%>€/jour</p>
+            <p><%#= display_stars(@wagoner.rating) %></p>.</p>
+          </div>
+        </div>
+
+
+        <div class="form">
+
+          <%= simple_form_for [@wagoner, @booking] do |f| %>
+          <%= f.input :start_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :end_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.button :submit, "Je réserve mon wagoner", class: "btn btn-primary" %>
+          <% end %>
+          <br>
+          <%= link_to "Revenir aux Wagoners", wagoners_path, class: "btn btn-outline-secondary btn-sm" %>
+        </div>
+      </div>
     </div>
-  <div class="card-body">
-    <p class="card-text">
-      <h2><%= @wagoner.github_name %></h2>
-      <p><strong>Description:</strong> <%= @wagoner.description%>.</p>
-      <p><strong>Price:</strong> 12€/heure.</p>
-      <p><%#= display_stars(@wagoner.rating) %></p>.</p>
-  </div>
-</div>
-
-
-<div class="form">
-
-  <%= simple_form_for [@wagoner, @booking] do |f| %>
-    <%= f.input :start_at %>
-    <%= f.input :end_at %>
-    <%= f.submit "Réserver", class: "btn btn-primary btn-lg btn-block" %>
-    <br>
-    <%= link_to "Revenir aux Wagoners", wagoners_path, class: "btn btn-outline-secondary btn-sm" %>
-  <% end %>
-</div>
-</div>
-</div>
