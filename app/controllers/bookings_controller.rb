@@ -21,6 +21,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
 
     if @booking.save
+      flash[:notice] = "Post successfully created"
       redirect_to wagoner_bookings_path(@wagoner)
     else
       render :new
