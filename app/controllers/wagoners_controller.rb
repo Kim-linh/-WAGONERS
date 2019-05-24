@@ -19,6 +19,13 @@ class WagonersController < ApplicationController
   def show
     @wagoner = Wagoner.find(params[:id])
     @booking = Booking.new
+        @markers =
+      [{
+        lat: @wagoner.latitude,
+        lng: @wagoner.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { wagoner: @wagoner }),
+        image_url: helpers.asset_url('logo_wagoner.png')
+      }]
   end
 
   def wag_show
