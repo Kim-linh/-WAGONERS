@@ -19,10 +19,26 @@ class WagonersController < ApplicationController
   def show
     @wagoner = Wagoner.find(params[:id])
     @booking = Booking.new
+        @markers =
+      [{
+        lat: @wagoner.latitude,
+        lng: @wagoner.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { wagoner: @wagoner }),
+        image_url: helpers.asset_url('logo_wagoner.png')
+      }]
   end
 
   def wag_show
     @wagoner = Wagoner.find(params[:id])
+    # @wagoners = Wagoner.where.not(latitude: nil, longitude: nil)
+    @markers =
+      [{
+        lat: @wagoner.latitude,
+        lng: @wagoner.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { wagoner: @wagoner }),
+        image_url: helpers.asset_url('logo_wagoner.png')
+      }]
+
   end
 
   def new
@@ -49,7 +65,6 @@ class WagonersController < ApplicationController
     @wagoner.destroy
   end
 
-
   private
 
   def find_wagoner
@@ -57,7 +72,6 @@ class WagonersController < ApplicationController
   end
 
   def wagoner_params
-    params.require(:wagoner).permit(:description, :github_name, :price, :user_id, :rating, :avatar)
+    params.require(:wagoner).permit(:description, :github_name, :price, :user_id, :rating, :avatar, :address)
   end
 end
-

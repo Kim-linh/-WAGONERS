@@ -7,6 +7,7 @@
       <%= f.input :github_name %>
       <%= f.input :description %>
       <%= f.input :price %>
+      <%= f.input :address %>
       <%= f.input :rating, :as => :hidden, default: 0 %>
       <%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user.id }%>
       <%= f.input :avatar %>

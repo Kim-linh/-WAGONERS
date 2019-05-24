@@ -18,6 +18,7 @@
           </div>
         </div>
 
+
         <div class="form-rent">
         <div class="form">
 
@@ -26,9 +27,21 @@
           <%= f.input :end_at, as: :string, required: false, input_html: {class: "datepicker"} %>
           <%= f.button :submit, "Je réserve mon wagoner", class: "btn btn-primary" %>
           <% end %>
-          <br>
+          <div>
+            <div
+            id="map"
+            style="width: 100%;
+            height: 300px; margin: 0px 0px; position: sticky; top: 0;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key = "<%= ENV['MAPBOX_API_KEY'] %>"
+            >
+          </div>
+        </div>
+        <br>
           <%= link_to "Revenir aux Wagoners", wagoners_path, class: "btn btn-outline-secondary btn-sm" %>
         </div>
+
       </div>
+
     </div>
   </div>
