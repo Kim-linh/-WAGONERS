@@ -35,6 +35,7 @@
   display: flex;
   justify-content: space-around;
   margin-bottom: 30px;
+  margin-top: 40px;
 }
 
 .card-title {
@@ -49,3 +50,11 @@
   text-align: center;
 }
 
+.card-body p{
+  padding: 5px;
+}
+
+.card-rent{
+  height: 150px;
+  width: 120px;
+}
