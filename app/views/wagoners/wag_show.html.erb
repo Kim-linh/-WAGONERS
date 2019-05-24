@@ -3,21 +3,36 @@
 
     <h1>Mon profil</h1>
 
+
     <div class="cards">
+
       <div class="card">
         <div class="card-image-product">
           <%= cl_image_tag(@wagoner.avatar) %>
         </div>
         <div class="card-body">
+
           <p class="card-text">
-          <h2 class="card-title"><%= @wagoner.github_name %></h2>
-          <p><strong>Description:</strong> <%= @wagoner.description%></p>
-          <p><strong>Price:</strong> <%= @wagoner.price%>€/jour</p>
-          <p><%= display_stars(@wagoner.rating) %></p></p>
-          <%= link_to "Je suis un Wagoner", root_path, class: 'card-link btn btn-primary' %>
+            <h2 class="card-title"><%= @wagoner.github_name %></h2>
+            <p><strong>Description:</strong> <%= @wagoner.description%></p>
+            <p><strong>Price:</strong> <%= @wagoner.price%>€/jour</p>
+            <p><strong>Address:</strong> <%= @wagoner.address%></p>
+
+          </div>
+          <div>
+            <div
+            id="map"
+            style="width: 100%;
+            height: 300px; margin: 0px 0px; position: sticky; top: 0;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key = "<%= ENV['MAPBOX_API_KEY'] %>"
+            >
+          </div>
         </div>
       </div>
 
     </div>
   </div>
 </div>
+
+
