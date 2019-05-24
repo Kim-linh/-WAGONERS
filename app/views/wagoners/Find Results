@@ -1,0 +1,71 @@
+Searching 169 files for "cloudinary"
+
+/Users/admin/code/Kim-linh/ WAGONERS/.env:
+    1  MAPBOX_API_KEY="pk.eyJ1Ijoia3VydG9vbmV0IiwiYSI6ImNqdno4anZ4NTA0cjE0M3JrbmRrNGkxYW0ifQ.LMncr6XVudCFJQewwOE5VA"
+    2: CLOUDINARY_URL=cloudinary://559513612895641:8NIxDFmgoXUwr85ofjsiUjU_skk@dvb6zudlf
+    3
+
+/Users/admin/code/Kim-linh/ WAGONERS/Gemfile:
+   17  gem 'devise'
+   18  gem 'geocoder'
+   19: gem 'cloudinary', '~> 1.9.1'
+   20  gem 'carrierwave', '~> 1.2'
+   21  gem 'jquery-rails'
+
+/Users/admin/code/Kim-linh/ WAGONERS/Gemfile.lock:
+   57        activesupport (>= 4.0.0)
+   58        mime-types (>= 1.16)
+   59:     cloudinary (1.9.1)
+   60        aws_cf_signer
+   61        rest-client
+   ..
+  224    bootsnap
+  225    carrierwave (~> 1.2)
+  226:   cloudinary (~> 1.9.1)
+  227    devise
+  228    dotenv-rails
+
+/Users/admin/code/Kim-linh/ WAGONERS/app/uploaders/photo_uploader.rb:
+    1  class PhotoUploader < CarrierWave::Uploader::Base
+    2:   include Cloudinary::CarrierWave
+    3
+    4  end
+
+/Users/admin/code/Kim-linh/ WAGONERS/app/views/shared/_banner.html.erb:
+    1  <div class="banner" style ="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    2: url(<%= image_url 'https://res.cloudinary.com/dvb6zudlf/image/upload/v1558538299/girls_f6dh4h.jpg' %>)">
+    3
+    4
+
+/Users/admin/code/Kim-linh/ WAGONERS/app/views/shared/_navbar.html.erb:
+    2
+    3    <%= link_to root_path, class: "navbar-brand" do %>
+    4:   <%= image_tag "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558537440/logo_wagoner_kei7wi.png" %>
+    5    <% end %>
+    6
+
+/Users/admin/code/Kim-linh/ WAGONERS/db/seeds.rb:
+   21
+   22  wagoner1 = Wagoner.new(address: "1 Avenue Des Champs Elysees 75008 Paris", github_name: "Benoit", description: "Je sers à rien", rating: 1, price: 12)
+   23: wagoner1.remote_avatar_url = "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558630637/benoit_oet2od.jpg"
+   24  wagoner1.user = nico
+   25  wagoner1.save!
+   26  wagoner2 = Wagoner.new(address: "10 avenue des Champs Elysees 75008 Paris", github_name: "Arthur", description: "On va boire un coup?", rating: 3, price: 28, user_id: 1, avatar: "arthur_aewwf6.jpg")
+   27  wagoner2.user = nico
+   28: wagoner2.remote_avatar_url = "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558630637/arthur_aewwf6.jpg"
+   29  wagoner2.save!
+   30  wagoner3 = Wagoner.new(address: "20 avenue des Champs Elysees 75008 Paris", github_name: "Sarah", description: "Je suis là pour vous aider", rating: 5, price: 53727, user_id: 1, avatar: "sarah_ddein0.jpg")
+   31  wagoner3.user = nico
+   32: wagoner3.remote_avatar_url = "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558630637/sarah_ddein0.jpg"
+   33  wagoner3.save!
+   34  wagoner4 = Wagoner.new(address: "30 avenue des Champs Elysees 75008 Paris", github_name: "Kevin", description: "Nous sommes deux, battez-vous", rating: 3, price: 375, user_id: 1, avatar: "kevin_ocvyjk.jpg")
+   35  wagoner4.user = nico
+   36: wagoner4.remote_avatar_url = "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558630637/kevin_ocvyjk.jpg"
+   37  wagoner4.save!
+   38  wagoner5 = Wagoner.new(address: "150 avenue des Champs Elysees 75008 Paris", github_name: "Mathilde", description: "Blank c'est moi", rating: 4, price: 29873, user_id: 1, avatar: "mathilde_g72pdq.jpg")
+   39  wagoner5.user = lola
+   40: wagoner5.remote_avatar_url = "https://res.cloudinary.com/dvb6zudlf/image/upload/v1558630637/mathilde_g72pdq.jpg"
+   41  wagoner5.save!
+   42
+
+13 matches across 7 files

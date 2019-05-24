@@ -1,12 +1,19 @@
-<h1>Inscription</h1>
+<div class="container py-9">
 
-<%= simple_form_for @wagoner do |f| %>
-    <%= f.input :github_name %>
-    <%= f.input :description %>
-    <%= f.input :price %>
-    <%= f.input :rating, :as => :hidden, default: 0 %>
-    <%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user.id }%>
-    <%= f.input :avatar %>
-    <%= f.input :avatar_cache, as: :hidden %>
-    <%= f.submit "Créer", class: "btn btn-primary btn-lg btn-block" %>
-<% end %>
+<div class="form-signup">
+  <h1>Inscription</h1>
+  <br>
+  <%= simple_form_for @wagoner do |f| %>
+      <%= f.input :github_name %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.input :rating, :as => :hidden, default: 0 %>
+      <%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user.id }%>
+      <%= f.input :avatar %>
+      <%= f.input :avatar_cache, as: :hidden %>
+      <br>
+      <%= f.submit "Créer", class: "btn btn-primary btn-lg btn-block" %>
+  <% end %>
+  </div>
+</div>
+ 
