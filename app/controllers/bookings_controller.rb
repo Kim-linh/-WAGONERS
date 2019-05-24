@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
 
     # @wagoner = Wagoner.find(params[:wagoner_id])
     @bookings = Booking.where(user: current_user)
-    
+
   end
 
   # def new
@@ -26,7 +26,8 @@ class BookingsController < ApplicationController
       flash[:notice] = ""
       redirect_to wagoner_bookings_path(@wagoner)
     else
-      render :new
+      flash[:notice] = "NOOOOOOOOOOOON"
+      redirect_to wagoner_path(@wagoner)
     end
   end
 
