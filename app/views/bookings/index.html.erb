@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="dashboard"> Ton Dashboard 😎</h1>
-  <h5 class="description">Tu trouveras ci-dessous tous tes petits rendez-vous gallants :</h5>
+  <h5 class="description">Tu trouveras ci-dessous tous tes petits rendez-vous galants :</h5>
   <div class="flash flash-success alert alert-dismissible fade show" role="alert">
     <% if @bookings.any? %>
       <span><strong>Yay!</strong> 🎉 Vous avez loué <%= @bookings.last.wagoner.github_name %></span>
@@ -12,26 +12,26 @@
       <% end %>
   </div>
 
-  <div class="row mt-5">
+  <div>
     <% @bookings.each do |booking| %>
-      <div class="col-4">
-
-        <!-- Element card -->
-
-          <div class="card" style="width: 18rem;">
-            <div class="card-image-height">
-              <%= cl_image_tag(booking.wagoner.avatar) %>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"><%= booking.wagoner.github_name %></h5>
-              <p class="card-text">
-                Réservation du <%= booking.start_at %> au <%= booking.end_at %>
-                <!-- utilise strftime -->
-              </p>
-              <%= link_to "voir le detail", wagoner_path(booking.wagoner), class: 'card-link btn btn-primary' %>
-            </div>
+      <div>
+        <div class="notification">
+          <%= cl_image_tag(booking.wagoner.avatar, width:100)%>
+          <div class="notification-content">
+            <p><small><%= booking.wagoner.github_name %></small></p>
+            <p>Réservation du <%= booking.start_at %> au <%= booking.end_at %></p>
           </div>
+
+          <!-- <div class="notification-actions">
+            <a href="#">Delete <i class="far fa-trash-alt"></i></a>
+          </div> -->
+        </div>
       </div>
     <% end %>
   </div>
+
+  <div>
+    <%= link_to "Retourner à l'accueil", root_path, class: 'card-link btn btn-primary' %>
+  </div>
+
 </div>

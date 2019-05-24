@@ -10,8 +10,8 @@
         </div>
         <div class="card-body">
           <p class="card-text">
-          <h2><%= @wagoner.github_name %></h2>
-          <p><strong>Description:</strong> <%= @wagoner.description%>.</p>
+          <h2 class="card-title"><%= @wagoner.github_name %></h2>
+          <p><strong>Description:</strong> <%= @wagoner.description%></p>
           <p><strong>Price:</strong> <%= @wagoner.price%>€/jour</p>
           <p><%= display_stars(@wagoner.rating) %></p></p>
           <%= link_to "Je suis un Wagoner", root_path, class: 'card-link btn btn-primary' %>
