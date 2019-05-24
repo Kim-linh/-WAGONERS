@@ -1,8 +1,8 @@
 <%= render 'shared/banner' %>
-<div class="container">
-  <div class="row">
+<div class="main-container">
+  <div class="row-home">
     <% @wagoners.each do |wagoner| %>
-      <div class="col-4 my-5">
+      <div class="col-6 my-5">
         <!-- Element card -->
 
         <div class="card" style="width: 18rem;">
@@ -21,16 +21,16 @@
       </div>
     <% end %>
   </div>
-</div>
 
-<div class= "container" >
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key = "<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
+
+
+  <div
+    id="map"
+    style="width: 100%;
+    height: 600px; margin: 20px 0px; position: sticky; top: 0;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key = "<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
 </div>
 
 
