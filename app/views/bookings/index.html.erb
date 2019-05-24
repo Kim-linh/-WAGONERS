@@ -1,17 +1,20 @@
 <div class="container">
   <h1 class="dashboard"> Ton Dashboard 😎</h1>
-  <h5 class="description">Tu trouveras,ci-dessous tous tes petits rendez-vous gallants :</h5>
+  <h5 class="description">Tu trouveras ci-dessous tous tes petits rendez-vous gallants :</h5>
   <div class="flash flash-success alert alert-dismissible fade show" role="alert">
-    <span><strong>Yay!</strong> 🎉 vous avez loué <%= @bookings.last.wagoner.github_name %></span>
-    <a data-dismiss="alert" aria-label="Close">
-      <i class="fas fa-times"></i>
-    </a>
+    <% if @bookings.any? %>
+      <span><strong>Yay!</strong> 🎉 Vous avez loué <%= @bookings.last.wagoner.github_name %></span>
+      <a data-dismiss="alert" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </a>
+      <% else %>
+        <p>Tu n'as aucun petits rendez-vous, book en un ! 😍</p>
+      <% end %>
   </div>
 
   <div class="row mt-5">
     <% @bookings.each do |booking| %>
       <div class="col-4">
-        <!-- <p class="name_wagoner"><%= booking.wagoner.github_name %></p> -->
 
         <!-- Element card -->
 
