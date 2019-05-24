@@ -4,6 +4,7 @@ class WagonersController < ApplicationController
   before_action :find_wagoner, only: [:show, :edit, :update, :delete]
 
   def index
+    @wagoners_list = Wagoner.all
     @wagoners = Wagoner.where.not(latitude: nil, longitude: nil)
     @markers = @wagoners.map do |wagoner|
       {
